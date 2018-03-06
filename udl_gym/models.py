@@ -13,7 +13,6 @@ class Gym(models.Model):
     country = models.TextField(blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     url = models.URLField(blank=True, null=True)
-    date = models.DateField(default=date.today)
 
     # Aclarir tema claus primaries i foranees
 
