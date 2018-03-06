@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from datetime import date
 
 # Create your models here.
 class Gym(models.Model):
@@ -12,6 +13,7 @@ class Gym(models.Model):
     country = models.TextField(blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     url = models.URLField(blank=True, null=True)
+    date = models.DateField(default=date.today)
 
     # Aclarir tema claus primaries i foranees
 
@@ -26,6 +28,7 @@ class Activity(models.Model):
     description = models.TextField(blank=True, null=True)
     type = models.TextField()
     gym = models.ForeignKey(Gym, null=True, related_name='activities')
+    date = models.DateField(default=date.today)
 
     def __unicode__(self):
         return u"%s" % self.name
