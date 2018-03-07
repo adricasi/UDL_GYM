@@ -54,7 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'UDL_GYM.urls'
+ROOT_URLCONF = 'GYM.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'UDL_GYM.wsgi.application'
+WSGI_APPLICATION = 'GYM.wsgi.application'
 
 
 # Database
