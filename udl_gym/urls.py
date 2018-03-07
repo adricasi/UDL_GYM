@@ -12,7 +12,7 @@ urlpatterns = patterns(
 
     # List activities
     url(r'^Activities/$', ListView.as_view(
-        queryset=Activity.objects.filter(date__lte=timezone.now()).order_by('date'),context_object_name='Activity',template_name = 'templates/activity.html'),
+        queryset=Activity.objects.filter(date__lte=timezone.now()).order_by('date'),context_object_name='activity_list',template_name = 'templates/activity.html'),
     name='Activities'),
 
     # Activity detail
