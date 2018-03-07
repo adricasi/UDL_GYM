@@ -2,7 +2,6 @@
 {% block content %}
 <h1>
     Activities
-    {% if user %}(<a href="{% url 'udl_gym:activity_create' %}">add</a>){% endif %}
 </h1>
 <ul>
     {% for Activity in activity_list %}
