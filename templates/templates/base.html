@@ -25,8 +25,9 @@
 <div id="sidebar">
     <table style="width:100%">
        <tr>
-           <th>{% block home %}<ul><li><a href="/udl_gym">Home</a></li></ul>{% endblock %}</th>
-           <th>{% block Activities %}<ul><li><a href="{% url 'udl_gym:Activities' %}"> Activities </a></li></ul>{% endblock %}</th>
+           <th>{% block home %}<a href="/udl_gym">Home</a>{% endblock %}</th>
+           <th>{% block Activities %}<a href="{% url 'udl_gym:Activities' %}"> Activities </a>{% endblock %}</th>
+           <th>{% block Trainers %}<a href="{% url 'udl_gym:Trainers' %}"> Trainers </a>{% endblock %}</th>
        </tr>
     </table>
 </div>

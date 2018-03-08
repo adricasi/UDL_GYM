@@ -26,7 +26,6 @@ class Activity(models.Model):
     description = models.TextField(blank=True, null=True)
     type = models.TextField()
     gym = models.ForeignKey(Gym, null=True, related_name='activities')
-    date = models.DateField(default=date.today)
 
     def __unicode__(self):
         return u"%s" % self.name

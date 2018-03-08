@@ -1,0 +1,12 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>
+    Trainers
+</h1>
+<ul>
+    {% for Trainer in trainer_list %}
+        <li><a href="{% url 'udl_gym:Trainer_detail' Trainer.id %}">{{ Trainer.name }}</a></li>
+    {% empty %}<li>Sorry, no trainers registered yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
