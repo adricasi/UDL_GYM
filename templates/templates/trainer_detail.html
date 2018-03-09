@@ -1,9 +1,9 @@
 {% extends "templates/base.html" %}
 {% block content %}
 <p>
-{{ Trainers.name }}: {{ Trainers.specialized }}<br/>
-{{ Trainers.email }}
-{{ Trainers.telephone }}
+    <h1>{{ trainers.name }}: {{ trainers.specialized }}<br/></h1>
+    <b> email: </b> {{ trainers.email }}<br/>
+    <b> telephone: </b>{{ trainers.telephone }}
 </p>
 
 {% endblock %}

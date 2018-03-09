@@ -1,8 +1,7 @@
 {% extends "templates/base.html" %}
 {% block content %}
 <p>
-{{ Activity.type }}: {{ Activity.name }}<br/>
-    {{ Activity.description }}
+    <h1>{{ activity.type }}: {{ activity.name }}<br/></h1>
+    <p align="justify"> {{ activity.description }}</p>
 </p>
-
 {% endblock %}

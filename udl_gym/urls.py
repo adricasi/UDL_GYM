@@ -1,6 +1,6 @@
 from django.conf.urls import url, patterns
 from django.views.generic import ListView, DetailView
-from django.utils import timezone
+
 from models import Activity,Trainers
 from . import views
 
