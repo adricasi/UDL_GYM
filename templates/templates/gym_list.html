@@ -1,0 +1,12 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>
+    Gyms
+</h1>
+<ul>
+    {% for Gym in gym_list %}
+        <li><a href="{% url 'udl_gym:gym_detail' Gym.id %}">{{ Gym.name }}</a></li>
+    {% empty %}<li>Sorry, no Gyms registered yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

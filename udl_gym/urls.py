@@ -1,7 +1,7 @@
 from django.conf.urls import url, patterns
 from django.views.generic import ListView, DetailView
 
-from models import Activity,Trainers
+from models import Activity,Trainers,Gym
 from . import views
 
 
@@ -21,7 +21,7 @@ urlpatterns = patterns(
     url(r'^Activities/(?P<pk>\d+)/$', DetailView.as_view(
         model=Activity,
         template_name='templates/activity_detail.html'),
-        name='Activity_detail'),
+    name='Activity_detail'),
 
     # List trainers
     url(r'^Trainers/$', ListView.as_view(
@@ -34,5 +34,18 @@ urlpatterns = patterns(
     url(r'^Trainers/(?P<pk>\d+)/$', DetailView.as_view(
         model=Trainers,
         template_name='templates/trainer_detail.html'),
-        name='Trainer_detail'),
+    name='Trainer_detail'),
+
+    # Gym list
+    url(r'^About us/$', ListView.as_view(
+        queryset=Gym.objects.order_by('name'),
+        context_object_name='gym_list',
+        template_name='templates/gym_list.html'),
+        name='About us'),
+
+    # Gym detail
+    url(r'^About us/(?P<pk>\d+)/$', DetailView.as_view(
+        model=Gym,
+        template_name='templates/gym_detail.html'),
+    name='gym_detail'),
 )

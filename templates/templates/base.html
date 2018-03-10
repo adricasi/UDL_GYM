@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lange="en">
 <head>
@@ -27,6 +28,7 @@
            <th>{% block home %}<a href="/udl_gym">Home</a>{% endblock %}</th>
            <th>{% block Activities %}<a href="{% url 'udl_gym:Activities' %}"> Activities </a>{% endblock %}</th>
            <th>{% block Trainers %}<a href="{% url 'udl_gym:Trainers' %}"> Trainers </a>{% endblock %}</th>
+           <th>{% block Aboutus %}<a href="{% url 'udl_gym:About us' %}"> About us </a>{% endblock %}</th>
        </tr>
     </table>
 </div>

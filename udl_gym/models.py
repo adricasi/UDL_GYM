@@ -19,20 +19,20 @@ class Gym(models.Model):
         return u"%s" % self.name
 
     def get_absolute_url(self):
-        return reverse('udl_gym:About_us', kwargs={'pk': self.pk})
+        return reverse('About us', kwargs={'pk': self.pk})
 
 class Activity(models.Model):
     name = models.TextField()
     description = models.TextField(blank=True, null=True)
     type = models.TextField()
-    gym = models.ForeignKey(Gym, null=True, related_name='activities')
+
 
     def __unicode__(self):
         return u"%s" % self.name
 
     def get_absolute_url(self):
         return reverse('udl_gym:activity_detail',
-                       kwargs={'pkr': self.gym.pk, 'pk': self.pk})
+                       kwargs={'pk': self.pk})
 
 
 class Trainers(models.Model):
@@ -44,7 +44,7 @@ class Trainers(models.Model):
     country = models.TextField(blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     specialized = models.TextField(blank=True, null=True)
-    gym = models.ForeignKey(Gym, null=True, related_name='trainers')
+
 
     def __unicode__(self):
         return u"%s" % self.name
