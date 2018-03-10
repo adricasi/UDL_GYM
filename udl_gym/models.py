@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
-from datetime import date
+
 
 # Create your models here.
 class Gym(models.Model):
@@ -51,4 +51,4 @@ class Trainers(models.Model):
 
     def get_absolute_url(self):
         return reverse('udl_gym:Trainers_detail',
-                       kwargs={'pkr': self.gym.pk, 'pk': self.pk})
+                       kwargs={ 'pk': self.pk})
